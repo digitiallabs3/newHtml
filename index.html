@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ey New Design</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/ey-design-system.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Scrollbar Custom CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+	<!-- Font Awesome JS -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="page-header">
+		<div class="header-group"><img class="header-group__image" src="img/EY_Logo_Beam_RGB_White_Yellow.png">
+			<div class="header-group__divider"></div><span class="header-group__labels">LAW</span>
+		</div>
+		<div class="userprofile-group">
+			<div class="userprofile__dropdown"><a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" id="dropdownMenuLink" role="button"><i class="material-icons">person</i>Default.User@ey.com </a>
+				<div aria-labelledby="dropdownMenuLink" class="dropdown-menu"><a class="dropdown-item" href="#"><i class="material-icons">input</i> Logout</a></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="tabs_wrapper">
+		<ul class="tabs">
+			<li class="active" rel="tab1">Information Of Promoter</li>
+			<li rel="tab2" class="validated-state"><i class="material-icons validate-list-icon">done</i> Company name</li>
+			<li rel="tab3">Business purpose</li>
+			<li rel="tab4">Office address</li>
+			<li rel="tab5">Total number of shares authorized to be issued</li>
+			<li rel="tab6">Number of shares to be issued upon the incorporation</li>
+			<li rel="tab7">Issue price per share</li>
+			<li rel="tab8">Amount of paid-in capital (stated capital) of the company</li>
+			<li rel="tab9">Whether or not the Company will have the board of directors</li>
+			<li rel="tab10">Information of director(s)</li>
+			<li rel="tab11">Director's duration of appointment</li>
+			<li rel="tab12">Fiscal year</li>
+			<li rel="tab13">The representative seal</li>
+			<li rel="tab14">Assignment of the representative director(s)</li>
+			<li rel="tab15">Information of corporate auditor(s)</li>
+			<li rel="tab16">Corporate auditor's duration of appointment</li>
+			<li rel="tab14">Information of President (shacho)</li>
+		</ul>
+		<div class="tab_container">
+			<h3 class="d_active tab_drawer_heading" rel="tab1">Name of the promoter:</h3>
+			<div id="tab1" class="tab_content">
+				<p><b>Name of the promoter:</b> If the promoter is Japanese, please provide us with the
+				information both in Japanese and in English.</p>
+				<div class="textinput-type flex-row mb-3">
+					<div class="textinput-group"><input class="textinput-group__textinput" id="text-input-default"><label class="textinput-group__label  asterisk" for="text-input-default">Name(E)</label></div>
+				</div>
+				<div class="textinput-type flex-row mb-3">
+					<div class="textinput-group"><input class="textinput-group__textinput" id="text-input-default"><label class="textinput-group__label" for="text-input-default">Name(J)</label></div>
+				</div>
+				<div class="flex-row mb-2">
+					<button alt="Button" class="btn btn--final-step m-0 mt-2" title="Button"> Save</button>
+				</div>
+			</div>
+			<!-- #tab1 -->
+			<h3 class="tab_drawer_heading validated-state" rel="tab2">Company name</h3>
+			<div id="tab2" class="tab_content">
+				<p><b>Company name in Japanese: </b>The company name in Japanese will be the formal name. As to the company name in Japanese, “kabushiki kaisha”, written in Japanese, i.e., “株式会社”, must be included either at the beginning or at the end of the name. The other part of the company name in Japanese can be either in Japanese characters and/or Roman alphabet. We will provide a Japanese translation of the English name, if necessary. </p>
+				<p><b>Company name in English:</b> You can use Kabushiki Kaisha, KK, K.K., Corporation, Co., Ltd. or Ltd. for the English term corresponding to “kabushiki kaisha”(i.e., 株式会社). </p>
+				<div class="textinput-type flex-row mb-3">
+					<div class="textinput-group"><input class="textinput-group__textinput" id="text-input-default"><label class="textinput-group__label  asterisk" for="text-input-default">Company Name(E)</label></div>
+				</div>
+				<div class="textinput-type flex-row mb-3">
+					<div class="textinput-group"><input class="textinput-group__textinput" id="text-input-default"><label class="textinput-group__label" for="text-input-default">Company Name(J)</label></div>
+				</div>
+				<div class="flex-row mb-2">
+					<button alt="Button" class="btn btn--final-step m-0 mt-2" title="Button"> Save</button>
+				</div>
+			</div>
+			<!-- #tab2 -->
+			<h3 class="tab_drawer_heading" rel="tab3">Business purpose</h3>
+			<div id="tab3" class="tab_content">
+				<div id="eBusinessPurposes">
+					<div class="textinput-type flex-row mb-3 bp-textbox">
+						<div class="textinput-group"><input class="textinput-group__textinput bp-text-input" id="textInputdefault1" index="1"><label class="textinput-group__label" for="text-input-default">Business purposes (E)</label>
+							<div class="add-btn">
+								<i class="material-icons" id="add-input">add_circle_outline</i>
+								<!-- <i class="material-icons" id="remove-input">remove_circle_outline</i> -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<p class="mt-2">+ All other business related or incidental to the activities</p>
+				
+				<!-- <div class="textinput-type flex-row mb-3">
+					<div class="textinput-group"><input class="textinput-group__textinput" id="text-input-default"><label class="textinput-group__label" for="text-input-default">Business purposes(E)</label>
+					<i class="material-icons" id="add-input">add_circle_outline</i><i class="material-icons" id="remove-input">remove_circle_outline</i></div>
+					<p class="mt-2">+ All other business related or incidental to the activities</p>
+				</div> -->
+				<div class="textinput-type flex-row mb-3">
+					<div class="textinput-group"><input class="textinput-group__textinput" id="text-input-default"><label class="textinput-group__label" for="text-input-default">Business purposes(J)</label>
+					</div>
+				</div>
+				<div class="textinput-type flex-row mb-3">
+					<div class="textinput-group"><input class="textinput-group__textinput" id="text-input-default"><label class="textinput-group__label" for="text-input-default">Business purposes(J)</label></div>
+					<p class="mt-2">+ 前号に付帯関連する⼀切の事業</p>
+				</div>
+
+				<div class="flex-row mb-2">
+					<button alt="Button" class="btn btn--final-step m-0 mt-2" title="Button"> Save</button>
+				</div>
+			</div>
+			<!-- #tab3 -->
+			<h3 class="tab_drawer_heading" rel="tab4">Office address</h3>
+			<div id="tab4" class="tab_content">
+				<p>Please send us the copies of the following documents:</p>
+				<p><b>Office address: </b>The office address to be registered must be in Japan. Please provide us with the information both in Japanese and in English (if available). We can introduce you to service providers who can provide a nominal registered office address for the Company.</p>
+				<div class="textinput-type flex-row mb-3">
+					<div class="textinput-type flex-row mb-3">
+					<div class="textinput-group"><input class="textinput-group__textinput" id="text-input-default"><label class="textinput-group__label  asterisk" for="text-input-default">Office Address(E)</label></div>
+				</div>
+				</div>
+				<div class="textinput-type flex-row mb-3">
+					<div class="textinput-group"><input class="textinput-group__textinput" id="text-input-default"><label class="textinput-group__label" for="text-input-default">Office Address(J)</label>
+					</div>
+				</div>
+				<div class="flex-row mb-2">
+					<button alt="Button" class="btn btn--final-step m-0 mt-2" title="Button"> Save</button>
+				</div>
+			</div>
+			<!-- #tab4 --> 
+			<h3 class="tab_drawer_heading" rel="tab5">Total number of shares authorized to be issued</h3>
+			<div id="tab5" class="tab_content">
+				<p><b>Total number of shares authorized to be issued*:</b> There is no limitation on the number of shares.</p>
+				<div class="textinput-type flex-row mb-3">
+					<div class="textinput-group"><input class="textinput-group__textinput" id="text-input-default"><label class="textinput-group__label" for="text-input-default">Number</label>
+					</div>
+				</div>
+				<div class="flex-row mb-2">
+					<button alt="Button" class="btn btn--final-step m-0 mt-2" title="Button"> Save</button>
+				</div>
+			</div>
+
+			<h3 class="tab_drawer_heading" rel="tab6">Number of shares to be issued upon the incorporation</h3>
+			<div id="tab6" class="tab_content">
+				<p><b>Number of shares to be issued upon the incorporation of the company*:</b> This value must be no more the total number of shares authorized to be issued.</p>
+				<div class="textinput-type flex-row mb-3">
+					<div class="textinput-group"><input class="textinput-group__textinput" id="text-input-default"><label class="textinput-group__label" for="text-input-default">Number</label>
+					</div>
+				</div>
+				<div class="flex-row mb-2">
+					<button alt="Button" class="btn btn--final-step m-0 mt-2" title="Button"> Save</button>
+				</div>
+			</div>
+
+			<h3 class="tab_drawer_heading" rel="tab7">Issue price per share</h3>
+			<div id="tab7" class="tab_content">
+				<p><b>bIssue price per share*:</b> No requirement (no par value). Issue price per share equals the capital amount (Item 5) divided by the number of shares to be issued. JPY1 per share is fine, but JPY10,000 or 50,000 per share is common</p>
+				<div class="textinput-type flex-row mb-3">
+					<div class="textinput-group"><input class="textinput-group__textinput" id="text-input-default"><label class="textinput-group__label" for="text-input-default">JPY</label>
+					</div>
+				</div>
+				<div class="flex-row mb-2">
+					<button alt="Button" class="btn btn--final-step m-0 mt-2" title="Button"> Save</button>
+				</div>
+			</div>
+
+			<h3 class="tab_drawer_heading" rel="tab8">Issue price per share</h3>
+			<div id="tab8" class="tab_content">
+				<p><b>Amount of paid-in capital:</b> The amount of initial paid-in capital must be JPY 1 or more. =(Number of share to be issued upon the incorporation)x(Issue price per share)</p>
+				<div class="textinput-type flex-row mb-3">
+					<div class="textinput-group"><input class="textinput-group__textinput" id="text-input-default"><label class="textinput-group__label" for="text-input-default">JPY</label>
+					</div>
+				</div>
+				<p><b>Amount of stated capital of the company*:</b> This value must be not less than a half of the amount of paid-in capital. </p>
+				<div class="flex-row mb-2">
+					<button alt="Button" class="btn btn--final-step m-0 mt-2" title="Button"> Save</button>
+				</div>
+			</div>
+		</div>
+		<div id="form-footer">
+			<div class="flex-row footer-row">
+				<button alt="Button" class="btn btn--back" title="Button"> Back</button><button alt="Button" class="btn btn--next" disabled="" title="Button"> Next </button>
+				<button alt="Disabled" class="btn float-right" disabled="" title="Disabled"> Save</button>
+			</div>
+		</div>
+	</div>
+	<!-- .tab_container -->
+</div>
+
+<footer class="footer">
+	<div class="footer__group">
+		<p class="footer__parag text-left"> 2020 EY - Privacy Notice</p>
+	</div>
+</footer>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/ey-design-system.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$(".tabs").mCustomScrollbar({
+			theme: "minimal"
+		});
+
+		$('#sidebarCollapse').on('click', function () {
+			$('#sidebar, #content, #form-footer').toggleClass('active');
+			$('.collapse.in').toggleClass('in');
+			$('a[aria-expanded=true]').attr('aria-expanded', 'false');
+		});
+	});
+</script>
+<script type="text/javascript">
+	$(function() {
+		initdsToolbarNavigation();
+		$(".fastfilter").dsFastFilter();
+		$(".textinput-group").dsInputFile();
+		$(".textinput-group__textinput").dsTextField();
+		$(".textinput-group__textinput").dsInputFile();
+		$(".textinput-group__label").dsTextField();
+		$(".textinput-group__label").dsSingleSelect();
+		$(".dropdown--pagination").dsSingleSelect();
+		$(".pagination-block").dsPagination();
+		$(".navbar__form").dsToolbarComponent();
+		$(".header-group__show-menu").on("click", function() {
+			$("#usage-navigation-bar-primary").dsMobileMenuNavigation("show");
+		});
+		$(".header-group__show-options").on("click", function() {
+			$("#usage-navigation-bar-primary").dsMobileMenuNavigation(
+				"showToolbar"
+				);
+		});
+		$("#usage-navigation-bar-primary>.btn-close").on("click", function() {
+			$("#usage-navigation-bar-primary").dsMobileMenuNavigation("hide");
+		});
+		$("#usage-navigation-bar-primary>ul>li>a.button").on(
+			"click",
+			function() {
+				$("#usage-navigation-bar-primary").dsMobileMenuNavigation("hide");
+			}
+			);
+		$(".navigation-bar-utility__button-container>.btn-close").on(
+			"click",
+			function() {
+				$("#usage-navigation-bar-primary").dsMobileMenuNavigation(
+					"hideToolbar"
+					);
+			}
+			);
+		if ($(".navigation-bar-modal").length > 0) {
+			$(".navigation-bar-modal").remove();
+		}
+			
+	$(".tab_content").hide();
+	$(".tab_content:first").show();
+
+	/* if in tab mode */
+	$("ul.tabs li").click(function() {
+
+		$(".tab_content").hide();
+		var activeTab = $(this).attr("rel"); 
+		$("#"+activeTab).fadeIn();      
+
+		$("ul.tabs li").removeClass("active");
+		$(this).addClass("active");
+
+		$(".tab_drawer_heading").removeClass("d_active");
+		$(".tab_drawer_heading[rel^='"+activeTab+"']").addClass("d_active");
+
+	/*$(".tabs").css("margin-top", function(){ 
+	   return ($(".tab_container").outerHeight() - $(".tabs").outerHeight() ) / 2;
+   });*/
+
+   $("#tab3").on("click", "#add-input", function(){
+	   $(".add-btn").remove();
+	   let inputLength = $(".bp-textbox").length + 1;
+	   
+	   //First method
+	   let outerDiv = $("<div>").attr("class", "textinput-type flex-row mb-3 bp-textbox");
+	   let innerDiv = $("<div>").attr("class", "textinput-group");
+	   let input = $("<input>").attr("class", "textinput-group__textinput bp-text-input").attr("id",`textInputdefault${inputLength}`).attr("index",inputLength);
+	   let label = $("<label>").attr("class", "textinput-group__label").attr("for", "text-input-default").text("Business purposes (E)");
+	   let addBtn = $("<div>").attr("class", "add-btn");
+	   let iaddBtn = $("<i>").attr("class" , "material-icons").attr("id", "add-input").text("add_circle_outline");
+	   let iMinusBtn = $("<i>").attr("class", "material-icons").attr("id", "remove-input").text("remove_circle_outline");
+	   let addBtnDiv = $(addBtn).append(iaddBtn).append(iMinusBtn);
+	   $("#eBusinessPurposes").append($(outerDiv).append($(innerDiv).append(input).append(label).append(addBtnDiv)));
+
+	//Second method
+	// $("#eBusinessPurposes").append(`<div class="textinput-type flex-row mb-3 bp-textbox">
+	// 									<div class="textinput-group"><input class="textinput-group__textinput bp-text-input" id=textInputdefault${inputLength} index=${inputLength}><label class="textinput-group__label" for="text-input-default">Business purposes (E)</label>
+	// 										<div class="add-btn">
+	// 											<i class="material-icons" id="add-input">add_circle_outline</i>
+	// 											<i class="material-icons" id="remove-input">remove_circle_outline</i>
+	// 										</div>
+	// 									</div>
+	// 								</div>`);
+   });
+});
+	$(".tab_container").css("min-height", function(){ 
+		return $(".tabs").outerHeight() + 50;
+	});
+	/* if in drawer mode */
+	$(".tab_drawer_heading").click(function() {
+
+		$(".tab_content").hide();
+		var d_activeTab = $(this).attr("rel"); 
+		$("#"+d_activeTab).fadeIn();
+
+		$(".tab_drawer_heading").removeClass("d_active");
+		$(this).addClass("d_active");
+
+		$("ul.tabs li").removeClass("active");
+		$("ul.tabs li[rel^='"+d_activeTab+"']").addClass("active");
+	});
+
+
+	/* Extra class "tab_last" 
+	   to add border to bottom side
+	   of last tab 
+	   $('ul.tabs li').last().addClass("tab_last");*/
+
+	});
+</script>
+</body>
+</html>
