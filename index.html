@@ -82,7 +82,7 @@
 				<div id="eBusinessPurposes">
 					<div class="textinput-type flex-row mb-3 bp-textbox">
 						<div class="textinput-group"><input class="textinput-group__textinput bp-text-input" id="textInputdefault1" index="1"><label class="textinput-group__label" for="text-input-default">Business purposes (E)</label>
-							<div class="add-btn">
+							<div class="add-remove-btns">
 								<i class="material-icons" id="add-input">add_circle_outline</i>
 								<!-- <i class="material-icons" id="remove-input">remove_circle_outline</i> -->
 							</div>
@@ -273,8 +273,14 @@
 	   return ($(".tab_container").outerHeight() - $(".tabs").outerHeight() ) / 2;
    });*/
 
-   $("#tab3").on("click", "#add-input", function(){
-	   $(".add-btn").remove();
+   $("#tab3").unbind().on("click", "#add-input", function(e){
+	   e.preventDefault();
+	   if($(".add-remove-btns").length === 1){
+			$(".add-remove-btns").addClass("hide-btns");
+	   }else{
+			$(this).parent().addClass("hide-btns");
+	   }
+
 	   let inputLength = $(".bp-textbox").length + 1;
 	   
 	   //First method
@@ -282,7 +288,7 @@
 	   let innerDiv = $("<div>").attr("class", "textinput-group");
 	   let input = $("<input>").attr("class", "textinput-group__textinput bp-text-input").attr("id",`textInputdefault${inputLength}`).attr("index",inputLength);
 	   let label = $("<label>").attr("class", "textinput-group__label").attr("for", "text-input-default").text("Business purposes (E)");
-	   let addBtn = $("<div>").attr("class", "add-btn");
+	   let addBtn = $("<div>").attr("class", "add-remove-btns");
 	   let iaddBtn = $("<i>").attr("class" , "material-icons").attr("id", "add-input").text("add_circle_outline");
 	   let iMinusBtn = $("<i>").attr("class", "material-icons").attr("id", "remove-input").text("remove_circle_outline");
 	   let addBtnDiv = $(addBtn).append(iaddBtn).append(iMinusBtn);
@@ -291,13 +297,19 @@
 	//Second method
 	// $("#eBusinessPurposes").append(`<div class="textinput-type flex-row mb-3 bp-textbox">
 	// 									<div class="textinput-group"><input class="textinput-group__textinput bp-text-input" id=textInputdefault${inputLength} index=${inputLength}><label class="textinput-group__label" for="text-input-default">Business purposes (E)</label>
-	// 										<div class="add-btn">
+	// 										<div class="add-remove-btns">
 	// 											<i class="material-icons" id="add-input">add_circle_outline</i>
 	// 											<i class="material-icons" id="remove-input">remove_circle_outline</i>
 	// 										</div>
 	// 									</div>
 	// 								</div>`);
    });
+
+   $("#tab3").on("click", "#remove-input", function(e){
+		$(this).parents(".bp-textbox").prev(".bp-textbox").find(".add-remove-btns").removeClass("hide-btns");
+		$(this).parents(".bp-textbox").remove();
+   });
+   
 });
 	$(".tab_container").css("min-height", function(){ 
 		return $(".tabs").outerHeight() + 50;
